@@ -53,6 +53,20 @@ class PlaylistRepository extends ServiceEntityRepository
                 ->getQuery()
                 ->getResult();       
     } 
+    /**
+     * retourne les playliste triées sur le nombre de vidéos
+     * @param type $champ
+     * @param type $ordre
+     * @return Playlist[]
+     */
+    public function findAllOrderByNombre($ordre): array{
+        return $this->createQueryBuilder('p')
+                ->leftjoin('p.formations', 'f')
+                ->groupBy('p.id')
+                ->orderBy('count(f.id)', $ordre)
+                ->getQuery()
+                ->getResult();   
+    }
 	
     /**
      * Enregistrements dont un champ contient une valeur
