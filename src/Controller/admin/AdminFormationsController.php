@@ -52,6 +52,7 @@ class AdminFormationsController extends AbstractController {
     }
     
      /**
+     * Action des boutons tri dans l'onglet formations du back-office
      * @Route("/admin/tri/{champ}/{ordre}/{table}", name="admin.formations.sort")
      * @param type $champ
      * @param type $ordre
@@ -68,6 +69,7 @@ class AdminFormationsController extends AbstractController {
     } 
     
     /**
+     *  Action du bouton filtrer dans l'onglet formations du back-office
      * @Route("/admin/recherche/{champ}/{table}", name="admin.formations.findallcontain")
      * @param type $champ
      * @param Request $request
@@ -87,6 +89,7 @@ class AdminFormationsController extends AbstractController {
     } 
     
     /**
+     * Action du bouton supprimer dans l'onglet formations du back-office
      * @Route("admin/suppr/{id}", name="admin.formation.suppr")
      * @param type $id
      * @return Response
@@ -98,6 +101,7 @@ class AdminFormationsController extends AbstractController {
     }
     
     /**
+     * Action du bouton Ajouter une formation dans l'onglet formations du back-office
      * @Route("/admin/ajout", name="admin.formation.ajout")
      * @param Request $request
      * @return Response
@@ -117,6 +121,7 @@ class AdminFormationsController extends AbstractController {
     }
     
     /**
+     * Action du bouton Editer dans l'onglet formations du back-office
      * @Route("/admin/edit/{id}", name="admin.formation.edit")
      * @param type $id
      * @param Request $request
