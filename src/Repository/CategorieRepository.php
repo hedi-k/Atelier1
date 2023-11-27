@@ -53,6 +53,18 @@ class CategorieRepository extends ServiceEntityRepository
                 ->orderBy('c.name', 'ASC')   
                 ->getQuery()
                 ->getResult();        
-    }    
+    }
+
+    /**
+     * 
+     * @param type $ordre
+     * @return Categorie[]
+     */
+    public function findAllOrderByName($ordre):array{
+        return $this->createQueryBuilder('c')
+                ->orderBy('c.name',$ordre)
+                ->getQuery()
+                ->getResult();
+    }
 
 }
