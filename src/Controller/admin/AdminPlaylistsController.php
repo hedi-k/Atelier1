@@ -91,15 +91,18 @@ class AdminPlaylistsController extends AbstractController {
      * @return Response
      */
     public function findAllContain($champ, Request $request, $table = ""): Response {
-        $valeur = $request->get("recherche");
-        $playlists = $this->playlistRepository->findByContainValue($champ, $valeur, $table);
-        $categories = $this->categorieRepository->findAll();
-        return $this->render(self::PAGE_APLAYLISTS, [
-                    'playlists' => $playlists,
-                    'categories' => $categories,
-                    'valeur' => $valeur,
-                    'table' => $table
-        ]);
+        if ($this->isCsrfTokenValid('filtre_' . $champ, $request->get('_token'))) {
+            $valeur = $request->get("recherche");
+            $playlists = $this->playlistRepository->findByContainValue($champ, $valeur, $table);
+            $categories = $this->categorieRepository->findAll();
+            return $this->render(self::PAGE_APLAYLISTS, [
+                        'playlists' => $playlists,
+                        'categories' => $categories,
+                        'valeur' => $valeur,
+                        'table' => $table
+            ]);
+        }
+        return $this->redirectToRoute(self::PAGE_APLAYLISTSBIS);
     }
 
     /**
