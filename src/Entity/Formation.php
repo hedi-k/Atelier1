@@ -11,6 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
+ * Entité formation
  * @ORM\Entity(repositoryClass=FormationRepository::class)
  */
 class Formation

@@ -3,8 +3,8 @@
 namespace App\Controller\admin;
 
 /**
- * Description of AdminFormationsController
- *
+ * Contrôleur de AdminFormations.
+ *(back-office)
  * @author hedi
  */
 use App\Entity\Formation;
@@ -39,6 +39,7 @@ class AdminFormationsController extends AbstractController {
     }
 
     /**
+     * Méthode pour l'affichage des formations en parie admine.
      * @Route("/admin", name="admin.formations")
      * @return Response
      */

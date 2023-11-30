@@ -14,6 +14,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use DateTime;
 use Symfony\Component\Validator\Constraints\LessThanOrEqual;
 
+/**
+ * Formulaire de formation.
+ */
 class FormationType extends AbstractType {
 
     public function buildForm(FormBuilderInterface $builder, array $options): void {

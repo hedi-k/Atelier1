@@ -7,8 +7,8 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
+ * Permet de faire le lien entre l'entité playlist et la bdd.
  * @extends ServiceEntityRepository<Playlist>
- *
  * @method Playlist|null find($id, $lockMode = null, $lockVersion = null)
  * @method Playlist|null findOneBy(array $criteria, array $orderBy = null)
  * @method Playlist[]    findAll()

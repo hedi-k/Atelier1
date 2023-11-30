@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Controleur de l'accueil
  *
- * @author emds
+ * @author emds modifiée par hédi
  */
 class AccueilController extends AbstractController{
       
@@ -27,6 +27,7 @@ class AccueilController extends AbstractController{
     }   
     
     /**
+     * Méthode pour la page d'accueil.
      * @Route("/", name="accueil")
      * @return Response
      */
@@ -38,6 +39,7 @@ class AccueilController extends AbstractController{
     }
     
     /**
+     * Méthode pour la page CGU.
      * @Route("/cgu", name="cgu")
      * @return Response
      */

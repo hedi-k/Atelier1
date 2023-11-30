@@ -34,6 +34,7 @@ class FormationsController extends AbstractController {
     }
     
     /**
+     * Méthode pour la page des formations.
      * @Route("/formations", name="formations")
      * @return Response
      */
@@ -47,6 +48,7 @@ class FormationsController extends AbstractController {
     }
 
     /**
+     * Méthode de tri des formtions en fonction des critères reçus en paramètre.
      * @Route("/formations/tri/{champ}/{ordre}/{table}", name="formations.sort")
      * @param type $champ
      * @param type $ordre
@@ -63,6 +65,7 @@ class FormationsController extends AbstractController {
     }     
     
     /**
+     * Méthode de recherche des formations en fonction des critères reçus en paramètre.
      * @Route("/formations/recherche/{champ}/{table}", name="formations.findallcontain")
      * @param type $champ
      * @param Request $request
@@ -82,6 +85,7 @@ class FormationsController extends AbstractController {
     }  
     
     /**
+     * Méthode pour l'affichage d'une formation spécifique.
      * @Route("/formations/formation/{id}", name="formations.showone")
      * @param type $id
      * @return Response

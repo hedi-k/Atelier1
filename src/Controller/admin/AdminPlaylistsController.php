@@ -13,7 +13,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Description of AdminPlaylistsController
+ * Contrôleur de AdminPlaylists
+ * (back-office)
  *
  * @author hedi
  */
@@ -49,6 +50,7 @@ class AdminPlaylistsController extends AbstractController {
     }
 
     /**
+     * Méthode pour l'affichage des playlists en parie admine.
      * @Route("/admin/playlists", name="admin.playlists")
      * @return Response
      */
@@ -62,6 +64,7 @@ class AdminPlaylistsController extends AbstractController {
     }
 
     /**
+     * Méthode de tri des playlists en fonction des critères reçus en paramètre.
      * Action des boutons tri dans l'onglet playlist du back-office
      * @Route("/admin/playlists/tri/{champ}/{ordre}", name="admin.playlists.sort")
      * @param type $champ

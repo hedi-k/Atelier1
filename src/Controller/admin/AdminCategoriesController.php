@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Description of AdminCategoriesController
+ * Contrôleur des AdminCatégorie
  *
  * @author hedi
  */
@@ -31,6 +31,7 @@ class AdminCategoriesController extends AbstractController {
     }
 
     /**
+     * Méthode pour l'affichage des catégories en parie admine.
      * @Route("/admin/categories", name="admin.categories")
      * @param Request $request
      * @return Response

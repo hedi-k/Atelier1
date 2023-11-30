@@ -7,8 +7,8 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
+ * Permet de faire le lien entre l'entité formation et la bdd.
  * @extends ServiceEntityRepository<Formation>
- *
  * @method Formation|null find($id, $lockMode = null, $lockVersion = null)
  * @method Formation|null findOneBy(array $criteria, array $orderBy = null)
  * @method Formation[]    findAll()

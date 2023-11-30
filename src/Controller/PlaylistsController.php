@@ -47,6 +47,7 @@ class PlaylistsController extends AbstractController {
     }
 
     /**
+     * Méthode pour l'affichage des playlists.
      * @Route("/playlists", name="playlists")
      * @return Response
      */
@@ -60,6 +61,7 @@ class PlaylistsController extends AbstractController {
     }
 
     /**
+     * Méthode de tri des playlists en fonction des critères reçus en paramètre.
      * @Route("/playlists/tri/{champ}/{ordre}", name="playlists.sort")
      * @param type $champ
      * @param type $ordre
@@ -80,6 +82,7 @@ class PlaylistsController extends AbstractController {
     }
 
     /**
+     * Méthode de recherche des playlists en fonction des critères reçus en paramètre.
      * @Route("/playlists/recherche/{champ}/{table}", name="playlists.findallcontain")
      * @param type $champ
      * @param Request $request
@@ -99,6 +102,7 @@ class PlaylistsController extends AbstractController {
     }
 
     /**
+     * Méthode pour afficher une playlist spécifique.
      * @Route("/playlists/playlist/{id}", name="playlists.showone")
      * @param type $id
      * @return Response

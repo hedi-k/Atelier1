@@ -19,6 +19,7 @@ use Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface
 
 /**
  * Description of KeycloakAuthenticator
+ * Classe nécessaire au fonctionnement de keyCloak
  *
  * @author GT630M
  */

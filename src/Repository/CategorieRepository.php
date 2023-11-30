@@ -7,8 +7,8 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
+ * Permet de faire le lien entre l'entité catégorie et la bdd.
  * @extends ServiceEntityRepository<Categorie>
- *
  * @method Categorie|null find($id, $lockMode = null, $lockVersion = null)
  * @method Categorie|null findOneBy(array $criteria, array $orderBy = null)
  * @method Categorie[]    findAll()
