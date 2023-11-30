@@ -30,7 +30,7 @@ class AccueilController extends AbstractController{
      * @Route("/", name="accueil")
      * @return Response
      */
-    public function index(): Response{
+    public function index(): Response {
         $formations = $this->repository->findAllLasted(2);
         return $this->render("pages/accueil.html.twig", [
             'formations' => $formations

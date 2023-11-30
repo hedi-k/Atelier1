@@ -41,6 +41,7 @@ class PlaylistRepositoryTest extends KernelTestCase {
         $nbPlaylist = $repository->count([]);
         $repository->add($playlist, true);
         $this->assertEquals($nbPlaylist + 1, $repository->count([]), "erreur sur testAddPlaylist()");
+        $repository->remove($playlist, true);
     }
     
     /**
