@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Controleur de l'accueil
+ * Essais commentaire pour le déploiment en continue
  *
  * @author emds modifiée par hédi
  */
