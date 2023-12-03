@@ -1,0 +1,59 @@
+Mediatekformation
+
+Présentation des ajouts.
+
+PAGE: Géstion des formation
+Depuis le back-office  https://mattek.go.yj.fr/mediatekformation/public/admin
+Une fois connecté au back-office, la première page qui s'affiche est la page de géstion des formations.
+Depuis cette page il est possible de supprimer, éditer ou ajouter une formation, pour ce faire il suffit de cliquer sur les boutons associés.
+Pour l'ajout d'une formation, seul la déscription n'est pas obligatoire et la date sélectionné doit êtré antérieur à aujourd'hui.
+
+Page Géstion des playlists  https://mattek.go.yj.fr/mediatekformation/public/admin/playlists
+Cette page permet de gérer les playlists.
+Depuis cette page il est possible de supprimer, éditer ou ajouter une playlist, pour ce faire il suffit de cliquer sur les boutons associés.
+Attention une playlist qui contient des formations ne peux pas êtré supprimée.
+Pour l'ajout d'une playlist, la déscription est optionnel.
+
+Page de gestion des Catégorie  https://mattek.go.yj.fr/mediatekformation/public/admin/categories
+Cette page permet de gérer les catégories.
+Depuis cette page il est possible d'ajouter, de supprimer ou de modifier une catégorie, pour ce faire il suffit de cliquer sur les boutons associés.
+
+Installation en local 
+
+Prérequi, le nécessaire pour faire fonctionner un projet sous Symfony, un IDE, Composer et Wampserver.
+Pour installer l'application en local, il suffit de télécharger le Zip du projet https://github.com/hedi-k/Atelier1.git
+Puis de le décomprésser dans le dossier voulu, (l'idéale et le dossier www de wampServer). 
+Ensuite via une console se positionner dans le dossier et taper : composer install
+Importez la base de donnée fourni https://github.com/hedi-k/Atelier1/blob/master/mediatekformation.sql
+Télécharger keycloak en version 19,0,1 et installez la.
+Ensuite via une console positionez vous dans le dossier /keycloak-19.0.1/bin et lancer la commande kc.bat start-dev pour lancer le service. (ne pas fermer la console pour l'utiliser)
+Pour accèder au service, il suffit de taper dans votre navigateur l'adresse indiqué dans la console http://0.0.0.0:8080
+Créez un royaume, un client et un users avec les options suivantes
+— Client type : OpenID Connect
+— Always display in console : Off
+— Client authentication : On
+— Authorisation : Off
+— Standard flow : On
+— Implicit flow : On
+— Direct access grants : On
+— Service accounts roles : Off
+— OAuth 2.0 Device Authorization Grant : Off
+— OIDC CIBA Grant : Off
+— Enabled : On (en haut à droite)
+— Valid redirect URIs (dans Access settings) : *
+— Consent required (dans Login settings) : On
+— Display client on screen : On
+— Front channel logout (dans logout settings) : Off
+— Backchannel logout session required : On
+— Backchannel logout revoke offline sessions : Off
+— username : adminmesmediatek86
+— email : aaa@aaa.com
+— Enabled : ON
+— Email Verified : OFF
+
+Ensuite configurer le projet symfony en suivant les indictation suivantes https://github.com/knpuniversity/oauth2-client-bundle
+
+Le projet est maintenant fonctionnel localement.
+
+
+
